@@ -13,20 +13,7 @@ public class DifficultyButton : MonoBehaviour
       button = GetComponent<Button>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         button.onClick.AddListener(SetDifficulty);
-        GameObject gmObject = GameObject.Find("Game Manager");
-        if (gmObject != null)
-        {
-            gameManager = gmObject.GetComponent<GameManager>();
-            if (gameManager == null)
-            {
-                Debug.LogError("GameManager component not found on 'Game Manager' GameObject.");
-            }
-        }
-        else
-        {
-            Debug.LogError("GameObject named 'Game Manager' not found in the scene.");
-        }
-        button.onClick.AddListener(SetDifficulty);
+      
 
     }
 
